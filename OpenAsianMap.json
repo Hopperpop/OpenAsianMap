@@ -33,7 +33,17 @@
 					{
 						"or": [
 							"cuisine=asian",
-							"origin=asian"
+							"cuisine=chinese",
+							"cuisine=indian",
+							"cuisine=japanese",
+							"cuisine=korean",
+							"cuisine=thai",
+							"origin=asian",
+							"origin=chinese",
+							"origin=indian",
+							"origin=japanese",
+							"origin=korean",
+							"origin=thai"
 						]
 					}
 				]
@@ -153,7 +163,7 @@
 				{
 					"tags": [
 						"shop=yes",
-						"cuisine=asian"
+						"origin=asian"
 					],
 					"title": {
 						"en": "Asian shop"
@@ -232,7 +242,9 @@
 							"cuisine=asian",
 							"cuisine=korean",
 							"cuisine=chinese",
-							"cuisine=japanese"
+							"cuisine=japanese",
+							"cuisine=indian",
+							"cuisine=thai"
 						]
 					}
 				]
