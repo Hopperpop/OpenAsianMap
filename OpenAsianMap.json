@@ -281,7 +281,7 @@
 			},
 			"presets": [],
 			"allowMove": true,
-			"wayHandling": 1,
+			"wayHandling": 1
 		}
 	],
 	"roamingRenderings": []
