@@ -13,7 +13,7 @@
 		"en"
 	],
 	"maintainer": "",
-	"icon": "https://cdn-icons.flaticon.com/png/512/1531/premium/1531331.png?token=exp=1644694291~hmac=fb7cec4d08304fd370d17ce922d9942e",
+	"icon": "./assets/svg/translate.svg",
 	"version": "0",
 	"startLat": 0,
 	"startLon": 0,
@@ -294,6 +294,37 @@
 			"presets": [],
 			"allowMove": true,
 			"wayHandling": 1
+		},
+		{
+			"id": "gardens",
+			"name": {
+				"en": "Gardens"
+			},
+			"minzoom": 10,
+			"overpassTags": {
+				"or": [
+					"garden:style=chinese",
+					"garden:style=zen",
+					"garden:style=japanese"
+				]
+			},
+			"title": {},
+			"description": {},
+			"tagRenderings": [],
+			"hideUnderlayingFeaturesMinPercentage": 0,
+			"icon": {
+				"render": "https://wiki.openstreetmap.org/w/images/1/18/Leisure_garden.png"
+			},
+			"width": {
+				"render": "8"
+			},
+			"iconSize": {
+				"render": "40,40,center"
+			},
+			"color": {
+				"render": "#0f0"
+			},
+			"presets": []
 		}
 	],
 	"roamingRenderings": []
