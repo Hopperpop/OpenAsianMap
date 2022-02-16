@@ -295,7 +295,37 @@
 			"allowMove": true,
 			"wayHandling": 1
 		},
-		"././layers/AsianGardens/AsianGardens.json"
+		{
+			"id": "gardens",
+			"name": {
+				"en": "Asian gardens"
+			},
+			"minzoom": 10,
+			"overpassTags": {
+				"or": [
+					"garden:style=chinese",
+					"garden:style=zen",
+					"garden:style=japanese"
+				]
+			},
+			"title": {},
+			"description": {},
+			"tagRenderings": [],
+			"hideUnderlayingFeaturesMinPercentage": 0,
+			"icon": {
+				"render": "https://wiki.openstreetmap.org/w/images/1/18/Leisure_garden.png"
+			},
+			"width": {
+				"render": "8"
+			},
+			"iconSize": {
+				"render": "40,40,center"
+			},
+			"color": {
+				"render": "#0f0"
+			},
+			"presets": []
+		}
 	],
 	"roamingRenderings": []
 }
