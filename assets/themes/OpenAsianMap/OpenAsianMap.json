@@ -354,7 +354,23 @@
 					"arch:type=paifang"
 				]
 			},
-			"title": {},
+			"title": {
+				"render": {
+					"en": "Asian building"
+				},
+				"mappings": [
+					{
+						"if": {
+							"and": [
+								"name~*"
+							]
+						},
+						"then": {
+							"en": "{name}"
+						}
+					}
+				]
+			},
 			"description": {},
 			"tagRenderings": [],
 			"hideUnderlayingFeaturesMinPercentage": 0,
@@ -370,7 +386,8 @@
 			"color": {
 				"render": "#00f"
 			},
-			"presets": []
+			"presets": [],
+			"wayHandling": 1
 		}
 	],
 	"roamingRenderings": []
