@@ -286,7 +286,7 @@
 				"render": "8"
 			},
 			"iconSize": {
-				"render": "40,40,center"
+				"render": "30,30,center"
 			},
 			"color": {
 				"render": "#00f"
@@ -308,7 +308,23 @@
 					"garden:style=japanese"
 				]
 			},
-			"title": {},
+			"title": {
+				"render": {
+					"en": "Asian garden"
+				},
+				"mappings": [
+					{
+						"if": {
+							"and": [
+								"name~*"
+							]
+						},
+						"then": {
+							"en": "{name}"
+						}
+					}
+				]
+			},
 			"description": {},
 			"tagRenderings": [],
 			"hideUnderlayingFeaturesMinPercentage": 0,
