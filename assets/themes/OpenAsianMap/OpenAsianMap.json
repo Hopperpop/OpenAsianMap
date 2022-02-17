@@ -7,7 +7,7 @@
 		"en": "A map to find Asian related places."
 	},
 	"description": {
-		"en": "Searching for a Chinese restaurant? Want to make your own shushi? Or what about a relaxing walk in a Japanese garden? Find any Asian related place closeby with the help of this map."
+		"en": "Searching for a Chinese restaurant? Want to make your own shushi and need ingredients? Or what about a relaxing walk in a Japanese garden? Find any Asian related place close by with the help of this map."
 	},
 	"language": [
 		"en"
@@ -233,7 +233,7 @@
 			"name": {
 				"en": "Asian restaurants"
 			},
-			"minzoom": 12,
+			"minzoom": 14,
 			"overpassTags": {
 				"and": [
 					"amenity=restaurant",
