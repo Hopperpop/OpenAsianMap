@@ -30,6 +30,8 @@
 			"overpassTags": {
 				"and": [
 					"shop~*",
+					"shop!~vacant",
+					"disused:shop=",
 					{
 						"or": [
 							"cuisine=asian",
