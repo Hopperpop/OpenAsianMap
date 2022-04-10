@@ -72,6 +72,7 @@
 			},
 			"tagRenderings": [
 				{
+					"group": "General",
 					"question": {
 						"en": "What is the name of this shop?"
 					},
@@ -89,8 +90,9 @@
 					}
 				},
 				{
+					"group": "General",
 					"render": {
-						"en": "Shop: {shop}"
+						"en": "<b>Type: </b>{shop}"
 					},
 					"question": {
 						"en": "What type of shop is this?"
@@ -106,7 +108,7 @@
 								]
 							},
 							"then": {
-								"en": "Convenience store"
+								"en": "<b>Type: </b>Convenience store"
 							}
 						},
 						{
@@ -116,7 +118,7 @@
 								]
 							},
 							"then": {
-								"en": "Supermarket"
+								"en": "<b>Type: </b>Supermarket"
 							}
 						},
 						{
@@ -126,7 +128,7 @@
 								]
 							},
 							"then": {
-								"en": "Fruit and vegetables"
+								"en": "<b>Type: </b>Fruit and vegetables"
 							}
 						},
 						{
@@ -136,7 +138,7 @@
 								]
 							},
 							"then": {
-								"en": "Bakery"
+								"en": "<b>Type: </b>Bakery"
 							}
 						},
 						{
@@ -146,19 +148,57 @@
 								]
 							},
 							"then": {
-								"en": "Seafood"
+								"en": "<b>Type: </b>Seafood"
 							}
 						}
 					],
-					"id": "shops-shop"
+					"id": "shops-type"
 				},
-				"website",
-				"email",
-				"phone",
-				"opening_hours",
-				"payment-options",
-				"reviews",
-				"images"
+				{
+					"builtin": "website",
+					"override": {
+						"group": "contact",
+						"render": "<b>Website: </b><a href='{website}' target='_blank'>{website}</a>"
+					}
+				},
+				{
+					"builtin": "email",
+					"override": {
+						"group": "contact",
+						"render": "<b>Email: </b><a href='mailto:{email}' target='_blank'>{email}</a>"
+					}
+				},
+				{
+					"builtin": "phone",
+					"override": {
+						"group": "contact",
+						"render": "<b>Phone: </b><a href='tel:{phone}'>{phone}</a>"
+					}
+				},
+				{
+					"builtin": "payment-options",
+					"override": {
+						"group": "extra"
+					}
+				},
+				{
+					"builtin": "opening_hours",
+					"override": {
+						"group": "extra"
+					}
+				},
+				{
+					"builtin": "reviews",
+					"override": {
+						"group": "extra"
+					}
+				},
+				{
+					"builtin": "images",
+					"override": {
+						"group": "extra"
+					}
+				}
 			],
 			"hideUnderlayingFeaturesMinPercentage": 0,
 			"presets": [
