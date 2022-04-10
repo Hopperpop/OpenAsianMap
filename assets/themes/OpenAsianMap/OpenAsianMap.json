@@ -331,13 +331,51 @@
 				"en": "Layer with all Asian restaurants."
 			},
 			"tagRenderings": [
-				"website",
-				"email",
-				"phone",
-				"opening_hours",
-				"payment-options",
-				"reviews",
-				"images"
+				{
+					"builtin": "website",
+					"override": {
+						"group": "contact",
+						"render": "<b>Website: </b><a href='{website}' target='_blank'>{website}</a>"
+					}
+				},
+				{
+					"builtin": "email",
+					"override": {
+						"group": "contact",
+						"render": "<b>Email: </b><a href='mailto:{email}' target='_blank'>{email}</a>"
+					}
+				},
+				{
+					"builtin": "phone",
+					"override": {
+						"group": "contact",
+						"render": "<b>Phone: </b><a href='tel:{phone}'>{phone}</a>"
+					}
+				},
+				{
+					"builtin": "payment-options",
+					"override": {
+						"group": "extra"
+					}
+				},
+				{
+					"builtin": "opening_hours",
+					"override": {
+						"group": "extra"
+					}
+				},
+				{
+					"builtin": "reviews",
+					"override": {
+						"group": "extra"
+					}
+				},
+				{
+					"builtin": "images",
+					"override": {
+						"group": "extra"
+					}
+				}
 			],
 			"filter": [
 				{
@@ -470,7 +508,10 @@
 				]
 			},
 			"description": {},
-			"tagRenderings": [],
+			"tagRenderings": [
+				"images",
+				"wikipedia"
+			],
 			"hideUnderlayingFeaturesMinPercentage": 0,
 			"icon": {
 				"render": "./sakura-tree.svg"
@@ -516,7 +557,9 @@
 				]
 			},
 			"description": {},
-			"tagRenderings": [],
+			"tagRenderings": [
+				"images"
+			],
 			"hideUnderlayingFeaturesMinPercentage": 0,
 			"icon": {
 				"render": "./logo.svg"
