@@ -7,7 +7,7 @@
 		"en": "A map to find Asian related places."
 	},
 	"description": {
-		"en": "Searching for a Chinese restaurant? Want to make your own shushi and need ingredients? Or what about a relaxing walk in a Japanese garden? Find any Asian related place close by with the help of this map."
+		"en": "Searching for a Chinese restaurant? Want to make your own shushi and need ingredients? Or what about a relaxing walk in a Japanese garden? Find all Asian related places around with the help of this map."
 	},
 	"language": [
 		"en"
@@ -200,6 +200,19 @@
 					}
 				}
 			],
+			"filter": [
+				{
+					"id": "is_open",
+					"options": [
+						{
+							"osmTags": "_isOpen=yes",
+							"question": {
+								"en": "Opened now"
+							}
+						}
+					]
+				}
+			],
 			"hideUnderlayingFeaturesMinPercentage": 0,
 			"presets": [
 				{
@@ -278,7 +291,12 @@
 			"minzoom": 14,
 			"overpassTags": {
 				"and": [
-					"amenity=restaurant",
+					{
+						"or": [
+							"amenity=restaurant",
+							"amenity=fast_food"
+						]
+					},
 					{
 						"or": [
 							"cuisine=asian",
@@ -286,7 +304,8 @@
 							"cuisine=chinese",
 							"cuisine=japanese",
 							"cuisine=indian",
-							"cuisine=thai"
+							"cuisine=thai",
+							"cuisine=sushi"
 						]
 					}
 				]
@@ -319,6 +338,89 @@
 				"payment-options",
 				"reviews",
 				"images"
+			],
+			"filter": [
+				{
+					"id": "is_open",
+					"options": [
+						{
+							"osmTags": "_isOpen=yes",
+							"question": {
+								"en": "Opened now"
+							}
+						}
+					]
+				},
+				{
+					"id": "cuisine",
+					"options": [
+						{
+							"question": {
+								"en": "All"
+							}
+						},
+						{
+							"question": {
+								"en": "Korean"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=korean"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Chinese"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=chinese"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Japanese"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=japanese"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Indian"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=indian"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Thai"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=thai"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Sushi"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=sushi"
+								]
+							}
+						}
+					]
+				}
 			],
 			"hideUnderlayingFeaturesMinPercentage": 0,
 			"icon": {
