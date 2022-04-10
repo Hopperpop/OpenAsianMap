@@ -461,18 +461,38 @@
 				}
 			],
 			"hideUnderlayingFeaturesMinPercentage": 0,
-			"icon": {
-				"render": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
-			},
-			"width": {
-				"render": "8"
-			},
-			"iconSize": {
-				"render": "30,30,center"
-			},
-			"color": {
-				"render": "#00f"
-			},
+			"mapRendering": [
+				{
+					"icon": {
+						"render": "https://wiki.openstreetmap.org/w/images/1/1f/Fast-food-16.svg",
+						"mappings": [
+							{
+								"if": "amenity=restaurant",
+								"then": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
+							}
+						]
+					},
+					"iconBadges": [
+						{
+							"if": "opening_hours~*",
+							"then": "isOpen"
+						}
+					],
+					"label": {
+						"mappings": [
+							{
+								"if": "name~*",
+								"then": "<div style='background: white; padding: 0.25em; border-radius:0.5em'>{name}</div>"
+							}
+						]
+					},
+					"iconSize": "30,30,center",
+					"location": [
+						"point",
+						"centroid"
+					]
+				}
+			],
 			"presets": [],
 			"allowMove": true,
 			"wayHandling": 1
