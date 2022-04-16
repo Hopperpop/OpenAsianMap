@@ -743,11 +743,24 @@
 			"mapRendering": [
 				{
 					"icon": {
-						"render": "https://wiki.openstreetmap.org/w/images/1/1f/Fast-food-16.svg",
+						"render": "./fastfood.svg",
 						"mappings": [
 							{
+								"if": "cuisine=sushi",
+								"then": "./sushi.svg"
+							},
+							{
+								"if": {
+									"or": [
+										"cuisine=hotpot",
+										"cuisine=hot_pot"
+									]
+								},
+								"then": "./hotpot.svg"
+							},
+							{
 								"if": "amenity=restaurant",
-								"then": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
+								"then": "./restaurant.svg"
 							}
 						]
 					},
