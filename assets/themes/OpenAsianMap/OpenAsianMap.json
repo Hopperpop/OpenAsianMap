@@ -305,7 +305,22 @@
 							"cuisine=japanese",
 							"cuisine=indian",
 							"cuisine=thai",
-							"cuisine=sushi"
+							"cuisine=vietnamese",
+							"cuisine=indonesian",
+							"cuisine=filipino",
+							"cuisine=malaysian",
+							"cuisine=taiwanese",
+							"cuisine=shandong",
+							"cuisine=sichuan",
+							"cuisine=hunan",
+							"cuisine=okinawa_ryori",
+							"cuisine=sushi",
+							"cuisine=hot_pot",
+							"cuisine=hotpot",
+							"cuisine=dumplings",
+							"cuisine=noodle",
+							"cuisine=ramen",
+							"cuisine=soba"
 						]
 					}
 				]
@@ -331,6 +346,202 @@
 				"en": "Layer with all Asian restaurants."
 			},
 			"tagRenderings": [
+				{
+					"group": "General",
+					"question": {
+						"en": "What is the name of this restaurant?"
+					},
+					"render": {
+						"en": "<b>Name: </b> {name}"
+					},
+					"freeform": {
+						"key": "name"
+					},
+					"id": "Name"
+				},
+				{
+					"group": "General",
+					"question": {
+						"en": "What type of business is this?"
+					},
+					"mappings": [
+						{
+							"if": "amenity=fast_food",
+							"then": {
+								"en": "This is a <b>fastfood</b>-business, focussed on fast service. If seating is available, these are rather limited and functional."
+							}
+						},
+						{
+							"if": "amenity=restaurant",
+							"then": {
+								"en": "A <b>restaurant</b>, focussed on creating a nice experience where one is served at the table"
+							}
+						}
+					],
+					"id": "Fastfood vs restaurant"
+				},
+				{
+					"group": "General",
+					"render": {
+						"en": "<b>Cuisine: </b>{cuisine}"
+					},
+					"question": {
+						"en": "What Asian food do they serve here?"
+					},
+					"freeform": {
+						"key": "cuisine"
+					},
+					"mappings": [
+						{
+							"if": {
+								"and": [
+									"cuisine=asian"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Asian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=korean"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Korean"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=chinese"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Chinees"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=japanese"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Japanese"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=indian"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Indian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=thai"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Thai"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=sushi"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Sushi"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=dumplings"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Dumplings"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=noodle"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Noodle"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=ramen"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Ramen"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=soba"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Soba"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=hot_pot"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Hot pot"
+							}
+						}
+					],
+					"id": "restaurant-cuisine"
+				},
+				{
+					"group": "General",
+					"question": {
+						"en": "Does this place offer takea-way?"
+					},
+					"mappings": [
+						{
+							"if": "takeaway=only",
+							"then": {
+								"en": "This is a take-away only business"
+							}
+						},
+						{
+							"if": "takeaway=yes",
+							"then": {
+								"en": "Take-away is possible here"
+							}
+						},
+						{
+							"if": "takeaway=no",
+							"then": {
+								"en": "Take-away is not possible here"
+							}
+						}
+					],
+					"id": "Takeaway"
+				},
 				{
 					"builtin": "website",
 					"override": {
@@ -385,6 +596,22 @@
 							"osmTags": "_isOpen=yes",
 							"question": {
 								"en": "Opened now"
+							}
+						}
+					]
+				},
+				{
+					"id": "takeway",
+					"options": [
+						{
+							"osmTags": {
+								"or": [
+									"takeaway=yes",
+									"takeaway=only"
+								]
+							},
+							"question": {
+								"en": "Take-away"
 							}
 						}
 					]
@@ -454,6 +681,57 @@
 							"osmTags": {
 								"or": [
 									"cuisine=sushi"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Dumplings"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=dumplings"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Noodle"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=noodle"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Ramen"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=ramen"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Soba"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=soba"
+								]
+							}
+						},
+						{
+							"question": {
+								"en": "Hot pot"
+							},
+							"osmTags": {
+								"or": [
+									"cuisine=hotpot",
+									"cuisine=hot_pot"
 								]
 							}
 						}
