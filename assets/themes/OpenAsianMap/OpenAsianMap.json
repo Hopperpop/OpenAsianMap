@@ -752,6 +752,66 @@
 					},
 					"iconBadges": [
 						{
+							"if": "cuisine=japanese",
+							"then": {
+								"render": "./jp.svg"
+							}
+						},
+						{
+							"if": "cuisine=korean",
+							"then": {
+								"render": "./kr.svg"
+							}
+						},
+						{
+							"if": "cuisine=chinese",
+							"then": {
+								"render": "./cn.svg"
+							}
+						},
+						{
+							"if": "cuisine=indian",
+							"then": {
+								"render": "./in.svg"
+							}
+						},
+						{
+							"if": "cuisine=thai",
+							"then": {
+								"render": "./th.svg"
+							}
+						},
+						{
+							"if": "cuisine=vietnamese",
+							"then": {
+								"render": "./vn.svg"
+							}
+						},
+						{
+							"if": "cuisine=indonesian",
+							"then": {
+								"render": "./id.svg"
+							}
+						},
+						{
+							"if": "cuisine=filipino",
+							"then": {
+								"render": "./ph.svg"
+							}
+						},
+						{
+							"if": "cuisine=malaysian",
+							"then": {
+								"render": "./my.svg"
+							}
+						},
+						{
+							"if": "cuisine=taiwanese",
+							"then": {
+								"render": "./tw.svg"
+							}
+						},
+						{
 							"if": "opening_hours~*",
 							"then": "isOpen"
 						}

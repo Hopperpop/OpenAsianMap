@@ -10,5 +10,68 @@
     "sources": [
       "https://www.iconpacks.net/free-icon/sakura-tree-9053.html"
     ]
+  },
+  {
+    "path": "cn.svg",
+    "license": "MIT",
+    "sources": [
+      "https://hatscripts.github.io/circle-flags/"
+    ]
+  },
+  {
+    "path": "id.svg",
+    "license": "MIT",
+    "sources": [
+      "https://hatscripts.github.io/circle-flags/"
+    ]
+  },
+  {
+    "path": "jp.svg",
+    "license": "MIT",
+    "sources": [
+      "https://hatscripts.github.io/circle-flags/"
+    ]
+  },
+  {
+    "path": "kr.svg",
+    "license": "MIT",
+    "sources": [
+      "https://hatscripts.github.io/circle-flags/"
+    ]
+  },
+  {
+    "path": "my.svg",
+    "license": "MIT",
+    "sources": [
+      "https://hatscripts.github.io/circle-flags/"
+    ]
+  },
+  {
+    "path": "ph.svg",
+    "license": "MIT",
+    "sources": [
+      "https://hatscripts.github.io/circle-flags/"
+    ]
+  },
+  {
+    "path": "th.svg",
+    "license": "MIT",
+    "sources": [
+      "https://hatscripts.github.io/circle-flags/"
+    ]
+  },
+  {
+    "path": "vn.svg",
+    "license": "MIT",
+    "sources": [
+      "https://hatscripts.github.io/circle-flags/"
+    ]
+  },
+  {
+    "path": "in.svg",
+    "license": "MIT",
+    "sources": [
+      "https://hatscripts.github.io/circle-flags/"
+    ]
   }
 ]
