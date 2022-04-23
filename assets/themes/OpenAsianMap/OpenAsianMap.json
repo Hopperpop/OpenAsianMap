@@ -295,28 +295,28 @@
 					},
 					{
 						"or": [
-							"cuisine=asian",
-							"cuisine=korean",
-							"cuisine=chinese",
-							"cuisine=japanese",
-							"cuisine=indian",
-							"cuisine=thai",
-							"cuisine=vietnamese",
-							"cuisine=indonesian",
-							"cuisine=filipino",
-							"cuisine=malaysian",
-							"cuisine=taiwanese",
-							"cuisine=shandong",
-							"cuisine=sichuan",
-							"cuisine=hunan",
-							"cuisine=okinawa_ryori",
-							"cuisine=sushi",
-							"cuisine=hot_pot",
-							"cuisine=hotpot",
-							"cuisine=dumplings",
-							"cuisine=noodle",
-							"cuisine=ramen",
-							"cuisine=soba"
+							"cuisine~(^|;)asian($|;)",
+							"cuisine~(^|;)korean($|;)",
+							"cuisine~(^|;)chinese($|;)",
+							"cuisine~(^|;)japanese($|;)",
+							"cuisine~(^|;)indian($|;)",
+							"cuisine~(^|;)thai($|;)",
+							"cuisine~(^|;)vietnamese($|;)",
+							"cuisine~(^|;)indonesian($|;)",
+							"cuisine~(^|;)filipino($|;)",
+							"cuisine~(^|;)malaysian($|;)",
+							"cuisine~(^|;)taiwanese($|;)",
+							"cuisine~(^|;)shandong($|;)",
+							"cuisine~(^|;)sichuan($|;)",
+							"cuisine~(^|;)hunan($|;)",
+							"cuisine~(^|;)okinawa_ryori($|;)",
+							"cuisine~(^|;)sushi($|;)",
+							"cuisine~(^|;)hot_pot($|;)",
+							"cuisine~(^|;)hotpot($|;)",
+							"cuisine~(^|;)dumplings($|;)",
+							"cuisine~(^|;)noodle($|;)",
+							"cuisine~(^|;)ramen($|;)",
+							"cuisine~(^|;)soba($|;)",
 						]
 					}
 				]
@@ -626,7 +626,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=korean"
+									"cuisine~(^|;)korean($|;)"
 								]
 							}
 						},
@@ -636,7 +636,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=chinese"
+									"cuisine~(^|;)chinese($|;)"
 								]
 							}
 						},
@@ -646,7 +646,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=japanese"
+									"cuisine~(^|;)japanese($|;)"
 								]
 							}
 						},
@@ -656,7 +656,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=indian"
+									"cuisine~(^|;)indian($|;)"
 								]
 							}
 						},
@@ -666,7 +666,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=thai"
+									"cuisine~(^|;)thai($|;)"
 								]
 							}
 						},
@@ -676,7 +676,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=sushi"
+									"cuisine~(^|;)sushi($|;)"
 								]
 							}
 						},
@@ -686,7 +686,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=dumplings"
+									"cuisine~(^|;)dumplings($|;)"
 								]
 							}
 						},
@@ -696,7 +696,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=noodle"
+									"cuisine~(^|;)noodle($|;)"
 								]
 							}
 						},
@@ -706,7 +706,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=ramen"
+									"cuisine~(^|;)ramen($|;)"
 								]
 							}
 						},
@@ -716,7 +716,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=soba"
+									"cuisine~(^|;)soba($|;)"
 								]
 							}
 						},
@@ -726,8 +726,8 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine=hotpot",
-									"cuisine=hot_pot"
+									"cuisine~(^|;)hotpot($|;)",
+									"cuisine~(^|;)hot_pot($|;)"
 								]
 							}
 						}
@@ -741,28 +741,28 @@
 						"render": "./fastfood.svg",
 						"mappings": [
 							{
-								"if": "cuisine=sushi",
+								"if": "cuisine~(^|;)sushi($|;)",
 								"then": "./sushi.svg"
 							},
 							{
 								"if": {
 									"or": [
-										"cuisine=hotpot",
-										"cuisine=hot_pot"
+										"cuisine~(^|;)hotpot($|;)",
+										"cuisine~(^|;)hot_pot($|;)"
 									]
 								},
 								"then": "./hotpot.svg"
 							},
 							{
-								"if": "cuisine=dumplings",
+								"if": "cuisine~(^|;)dumplings($|;)",
 								"then": "./dumpling.svg"
 							},
 							{
 								"if": {
 									"or": [
-										"cuisine=ramen",
-										"cuisine=soba",
-										"cuisine=noodle"
+										"cuisine~(^|;)ramen($|;)",
+										"cuisine~(^|;)soba($|;)",
+										"cuisine~(^|;)noodle($|;)"
 									]
 								},
 								"then": "./noodle.svg"
@@ -775,61 +775,61 @@
 					},
 					"iconBadges": [
 						{
-							"if": "cuisine=japanese",
+							"if": "cuisine~(^|;)japanese($|;)",
 							"then": {
 								"render": "./jp.svg"
 							}
 						},
 						{
-							"if": "cuisine=korean",
+							"if": "cuisine~(^|;)korean($|;)",
 							"then": {
 								"render": "./kr.svg"
 							}
 						},
 						{
-							"if": "cuisine=chinese",
+							"if": "cuisine~(^|;)chinese($|;)",
 							"then": {
 								"render": "./cn.svg"
 							}
 						},
 						{
-							"if": "cuisine=indian",
+							"if": "cuisine~(^|;)indian($|;)",
 							"then": {
 								"render": "./in.svg"
 							}
 						},
 						{
-							"if": "cuisine=thai",
+							"if": "cuisine~(^|;)thai($|;)",
 							"then": {
 								"render": "./th.svg"
 							}
 						},
 						{
-							"if": "cuisine=vietnamese",
+							"if": "cuisine~(^|;)vietnamese($|;)",
 							"then": {
 								"render": "./vn.svg"
 							}
 						},
 						{
-							"if": "cuisine=indonesian",
+							"if": "cuisine~(^|;)indonesian($|;)",
 							"then": {
 								"render": "./id.svg"
 							}
 						},
 						{
-							"if": "cuisine=filipino",
+							"if": "cuisine~(^|;)filipino($|;)",
 							"then": {
 								"render": "./ph.svg"
 							}
 						},
 						{
-							"if": "cuisine=malaysian",
+							"if": "cuisine~(^|;)malaysian($|;)",
 							"then": {
 								"render": "./my.svg"
 							}
 						},
 						{
-							"if": "cuisine=taiwanese",
+							"if": "cuisine~(^|;)taiwanese($|;)",
 							"then": {
 								"render": "./tw.svg"
 							}
