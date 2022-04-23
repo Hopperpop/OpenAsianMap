@@ -78,17 +78,12 @@
 						"en": "What is the name of this shop?"
 					},
 					"render": {
-						"en": "{name}"
+						"en": "<b>Name: </b>{name}"
 					},
 					"freeform": {
 						"key": "name"
 					},
-					"id": "shops-name",
-					"condition": {
-						"and": [
-							"name="
-						]
-					}
+					"id": "shops-name"
 				},
 				{
 					"group": "General",
@@ -776,7 +771,6 @@
 								"if": "amenity=restaurant",
 								"then": "./restaurant.svg"
 							}
-							
 						]
 					},
 					"iconBadges": [

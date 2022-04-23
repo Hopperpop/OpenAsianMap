@@ -105,9 +105,13 @@
   },
   {
     "path": "fastfood.svg",
-    "license": "CC BY 4.0",
+    "license": "Vecteezy.com",
+    "authors": [
+      "Abby Design"
+    ],
     "sources": [
-      "https://icon-icons.com/icon/Noodle/131073"
+      "https://www.vecteezy.com/vector-art/5723568-chinese-food-box-glyph-icon-food-vector",
+      "https://www.vecteezy.com/free-vector/noodle-icon"
     ]
   },
   {
