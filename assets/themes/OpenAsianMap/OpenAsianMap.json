@@ -35,18 +35,18 @@
 					"disused:shop=",
 					{
 						"or": [
-							"cuisine=asian",
-							"cuisine=chinese",
-							"cuisine=indian",
-							"cuisine=japanese",
-							"cuisine=korean",
-							"cuisine=thai",
-							"origin=asian",
-							"origin=chinese",
-							"origin=indian",
-							"origin=japanese",
-							"origin=korean",
-							"origin=thai"
+							"cuisine~(^|;)asian($|;)",
+							"cuisine~(^|;)chinese",
+							"cuisine~(^|;)indian($|;)",
+							"cuisine~(^|;)japanese($|;)",
+							"cuisine~(^|;)korean($|;)",
+							"cuisine~(^|;)thai($|;)",
+							"origin~(^|;)asian($|;)",
+							"origin~(^|;)chinese($|;)",
+							"origin~(^|;)indian($|;)",
+							"origin~(^|;)japanese($|;)",
+							"origin~(^|;)korean($|;)",
+							"origin~(^|;)thai($|;)"
 						]
 					}
 				]
