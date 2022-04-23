@@ -759,9 +759,24 @@
 								"then": "./hotpot.svg"
 							},
 							{
+								"if": "cuisine=dumplings",
+								"then": "./dumpling.svg"
+							},
+							{
+								"if": {
+									"or": [
+										"cuisine=ramen",
+										"cuisine=soba",
+										"cuisine=noodle"
+									]
+								},
+								"then": "./noodle.svg"
+							},
+							{
 								"if": "amenity=restaurant",
 								"then": "./restaurant.svg"
 							}
+							
 						]
 					},
 					"iconBadges": [

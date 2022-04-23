@@ -105,12 +105,31 @@
   },
   {
     "path": "fastfood.svg",
-    "license": "CC0",
+    "license": "CC BY 4.0",
+    "sources": [
+      "https://icon-icons.com/icon/Noodle/131073"
+    ]
+  },
+  {
+    "path": "dumpling.svg",
+    "license": "Vecteezy.com",
     "authors": [
-      "OSM Carto"
+      "Abby Design"
     ],
     "sources": [
-      "https://wiki.openstreetmap.org/w/images/1/1f/Fast-food-16.svg"
+      "https://www.vecteezy.com/vector-art/5723495-dumpling-glyph-icon-food-vector",
+      "https://www.vecteezy.com/free-vector/black"
+    ]
+  },
+  {
+    "path": "noodle.svg",
+    "license": "Vecteezy.com",
+    "authors": [
+      "Iyi Kon"
+    ],
+    "sources": [
+      "https://www.vecteezy.com/vector-art/450532-vector-noodles-icon",
+      "https://www.vecteezy.com/free-vector/noodle-icon"
     ]
   }
 ]
