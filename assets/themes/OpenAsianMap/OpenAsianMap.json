@@ -917,7 +917,13 @@
 			"minzoom": 12,
 			"overpassTags": {
 				"or": [
-					"arch:type=paifang"
+					"arch:type=paifang",
+					{
+						"and": [
+							"man_made=tower",
+							"tower:type=pagoda"
+						]
+					}
 				]
 			},
 			"title": {
@@ -942,9 +948,23 @@
 				"images"
 			],
 			"hideUnderlayingFeaturesMinPercentage": 0,
-			"icon": {
-				"render": "./logo.svg"
-			},
+			"mapRendering": [
+				{
+					"icon": {
+						"render": "./logo.svg",
+						"mappings": [
+							{
+								"if": "tower:type=pagoda",
+								"then": "./pagoda.svg"
+							}
+						]
+					},
+					"location": [
+						"point",
+						"centroid"
+					]
+				}
+			],
 			"width": {
 				"render": "8"
 			},
