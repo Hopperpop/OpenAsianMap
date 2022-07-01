@@ -329,7 +329,7 @@
 					{
 						"if": {
 							"and": [
-								"name!~"
+								"name~*"
 							]
 						},
 						"then": {
@@ -626,7 +626,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?korean(;.*)?"
+									"cuisine~i~(.*;)?korean(;.*)?"
 								]
 							}
 						},
@@ -636,7 +636,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?chinese(;.*)?"
+									"cuisine~i~(.*;)?chinese(;.*)?"
 								]
 							}
 						},
@@ -646,7 +646,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?japanese(;.*)?"
+									"cuisine~i~(.*;)?japanese(;.*)?"
 								]
 							}
 						},
@@ -656,7 +656,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?indian(;.*)?"
+									"cuisine~i~(.*;)?indian(;.*)?"
 								]
 							}
 						},
@@ -666,7 +666,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?thai(;.*)?"
+									"cuisine~i~(.*;)?thai(;.*)?"
 								]
 							}
 						},
@@ -676,7 +676,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?sushi(;.*)?"
+									"cuisine~i~(.*;)?sushi(;.*)?"
 								]
 							}
 						},
@@ -686,7 +686,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?dumplings(;.*)?"
+									"cuisine~i~(.*;)?dumplings(;.*)?"
 								]
 							}
 						},
@@ -696,7 +696,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?noodle(;.*)?"
+									"cuisine~i~(.*;)?noodle(;.*)?"
 								]
 							}
 						},
@@ -706,7 +706,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?ramen(;.*)?"
+									"cuisine~i~(.*;)?ramen(;.*)?"
 								]
 							}
 						},
@@ -716,7 +716,7 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?soba(;.*)?"
+									"cuisine~i~(.*;)?soba(;.*)?"
 								]
 							}
 						},
@@ -726,8 +726,8 @@
 							},
 							"osmTags": {
 								"or": [
-									"cuisine~(.*;)?hotpot(;.*)?",
-									"cuisine~(.*;)?hot_pot(;.*)?"
+									"cuisine~i~(.*;)?hotpot(;.*)?",
+									"cuisine~i~(.*;)?hot_pot(;.*)?"
 								]
 							}
 						}
