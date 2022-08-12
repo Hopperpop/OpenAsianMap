@@ -13,7 +13,7 @@
 		"en"
 	],
 	"maintainer": "",
-	"icon": "./logo.svg",
+	"icon": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/logo.svg",
 	"version": "0",
 	"startLat": 0,
 	"startLon": 0,
@@ -27,7 +27,7 @@
 			"name": {
 				"en": "Asian shops"
 			},
-			"minzoom": 10,
+			"minzoom": 12,
 			"overpassTags": {
 				"and": [
 					"shop~*",
@@ -35,18 +35,8 @@
 					"disused:shop=",
 					{
 						"or": [
-							"cuisine~(.*;)?asian(;.*)?",
-							"cuisine~(.*;)?chinese",
-							"cuisine~(.*;)?indian(;.*)?",
-							"cuisine~(.*;)?japanese(;.*)?",
-							"cuisine~(.*;)?korean(;.*)?",
-							"cuisine~(.*;)?thai(;.*)?",
-							"origin~(.*;)?asian(;.*)?",
-							"origin~(.*;)?chinese(;.*)?",
-							"origin~(.*;)?indian(;.*)?",
-							"origin~(.*;)?japanese(;.*)?",
-							"origin~(.*;)?korean(;.*)?",
-							"origin~(.*;)?thai(;.*)?"
+							"cuisine~(.*;)?(asian|chinese|indian|japanese|korean|thai)(;.*)?",
+							"origin~(.*;)?(asian|chinese|indian|japanese|korean|thai)(;.*)?"
 						]
 					}
 				]
@@ -284,7 +274,7 @@
 			"name": {
 				"en": "Asian restaurants"
 			},
-			"minzoom": 14,
+			"minzoom": 15,
 			"overpassTags": {
 				"and": [
 					{
@@ -293,32 +283,7 @@
 							"amenity=fast_food"
 						]
 					},
-					{
-						"or": [
-							"cuisine~(.*;)?asian(;.*)?",
-							"cuisine~(.*;)?korean(;.*)?",
-							"cuisine~(.*;)?chinese(;.*)?",
-							"cuisine~(.*;)?japanese(;.*)?",
-							"cuisine~(.*;)?indian(;.*)?",
-							"cuisine~(.*;)?thai(;.*)?",
-							"cuisine~(.*;)?vietnamese(;.*)?",
-							"cuisine~(.*;)?indonesian(;.*)?",
-							"cuisine~(.*;)?filipino(;.*)?",
-							"cuisine~(.*;)?malaysian(;.*)?",
-							"cuisine~(.*;)?taiwanese(;.*)?",
-							"cuisine~(.*;)?shandong(;.*)?",
-							"cuisine~(.*;)?sichuan(;.*)?",
-							"cuisine~(.*;)?hunan(;.*)?",
-							"cuisine~(.*;)?okinawa_ryori(;.*)?",
-							"cuisine~(.*;)?sushi(;.*)?",
-							"cuisine~(.*;)?hot_pot(;.*)?",
-							"cuisine~(.*;)?hotpot(;.*)?",
-							"cuisine~(.*;)?dumplings(;.*)?",
-							"cuisine~(.*;)?noodle(;.*)?",
-							"cuisine~(.*;)?ramen(;.*)?",
-							"cuisine~(.*;)?soba(;.*)?"
-						]
-					}
+					"cuisine~(.*;)?(asian|korean|chinese|japanese|indian|thai|vietnamese|indonesian|filipino|malaysian|taiwanese|shandong|sichuan|hunan|okinawa_ryori|sushi|hot_pot|hotpot|dumplings|noodle|ramen|soba)(;.*)?"
 				]
 			},
 			"title": {
@@ -738,11 +703,11 @@
 			"mapRendering": [
 				{
 					"icon": {
-						"render": "./fastfood.svg",
+						"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/fastfood.svg",
 						"mappings": [
 							{
 								"if": "cuisine~(.*;)?sushi(;.*)?",
-								"then": "./sushi.svg"
+								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/sushi.svg"
 							},
 							{
 								"if": {
@@ -751,11 +716,11 @@
 										"cuisine~(.*;)?hot_pot(;.*)?"
 									]
 								},
-								"then": "./hotpot.svg"
+								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/hotpot.svg"
 							},
 							{
 								"if": "cuisine~(.*;)?dumplings(;.*)?",
-								"then": "./dumpling.svg"
+								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/dumpling.svg"
 							},
 							{
 								"if": {
@@ -765,11 +730,11 @@
 										"cuisine~(.*;)?noodle(;.*)?"
 									]
 								},
-								"then": "./noodle.svg"
+								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/noodle.svg"
 							},
 							{
 								"if": "amenity=restaurant",
-								"then": "./restaurant.svg"
+								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/restaurant.svg"
 							}
 						]
 					},
@@ -777,61 +742,61 @@
 						{
 							"if": "cuisine~(.*;)?japanese(;.*)?",
 							"then": {
-								"render": "./jp.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/jp.svg"
 							}
 						},
 						{
 							"if": "cuisine~(.*;)?korean(;.*)?",
 							"then": {
-								"render": "./kr.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/kr.svg"
 							}
 						},
 						{
 							"if": "cuisine~(.*;)?chinese(;.*)?",
 							"then": {
-								"render": "./cn.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/cn.svg"
 							}
 						},
 						{
 							"if": "cuisine~(.*;)?indian(;.*)?",
 							"then": {
-								"render": "./in.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/in.svg"
 							}
 						},
 						{
 							"if": "cuisine~(.*;)?thai(;.*)?",
 							"then": {
-								"render": "./th.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/th.svg"
 							}
 						},
 						{
 							"if": "cuisine~(.*;)?vietnamese(;.*)?",
 							"then": {
-								"render": "./vn.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/vn.svg"
 							}
 						},
 						{
 							"if": "cuisine~(.*;)?indonesian(;.*)?",
 							"then": {
-								"render": "./id.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/id.svg"
 							}
 						},
 						{
 							"if": "cuisine~(.*;)?filipino(;.*)?",
 							"then": {
-								"render": "./ph.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/ph.svg"
 							}
 						},
 						{
 							"if": "cuisine~(.*;)?malaysian(;.*)?",
 							"then": {
-								"render": "./my.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/my.svg"
 							}
 						},
 						{
 							"if": "cuisine~(.*;)?taiwanese(;.*)?",
 							"then": {
-								"render": "./tw.svg"
+								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/tw.svg"
 							}
 						},
 						{
@@ -863,7 +828,7 @@
 			"name": {
 				"en": "Asian gardens"
 			},
-			"minzoom": 10,
+			"minzoom": 12,
 			"overpassTags": {
 				"or": [
 					"garden:style=chinese",
@@ -895,7 +860,7 @@
 			],
 			"hideUnderlayingFeaturesMinPercentage": 0,
 			"icon": {
-				"render": "./sakura-tree.svg"
+				"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/sakura-tree.svg"
 			},
 			"width": {
 				"render": "8"
@@ -951,11 +916,11 @@
 			"mapRendering": [
 				{
 					"icon": {
-						"render": "./logo.svg",
+						"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/logo.svg",
 						"mappings": [
 							{
 								"if": "tower:type=pagoda",
-								"then": "./pagoda.svg"
+								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/pagoda.svg"
 							}
 						]
 					},
