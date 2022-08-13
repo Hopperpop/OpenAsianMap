@@ -36,7 +36,8 @@
 					{
 						"or": [
 							"cuisine~(.*;)?(asian|chinese|indian|japanese|korean|thai)(;.*)?",
-							"origin~(.*;)?(asian|chinese|indian|japanese|korean|thai)(;.*)?"
+							"origin~(.*;)?(asian|chinese|indian|japanese|korean|thai)(;.*)?",
+							"massage~(.*;)?(chinese|thai|shiatsu|acupressure|korean|thai)(;.*)?"
 						]
 					}
 				]
@@ -136,9 +137,231 @@
 							"then": {
 								"en": "<b>Type: </b>Seafood"
 							}
+						},
+						{
+							"if": {
+								"and": [
+									"shop=deli"
+								]
+							},
+							"then": {
+								"en": "<b>Type: </b>Delicatessen"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"shop=anime"
+								]
+							},
+							"then": {
+								"en": "<b>Type: </b>Anime/Manga"
+							}
 						}
 					],
 					"id": "shops-type"
+				},
+				{
+					"group": "General",
+					"render": {
+						"en": "<b>Massage: </b>{massage}"
+					},
+					"question": {
+						"en": "What type of massage is given here?"
+					},
+					"freeform": {
+						"key": "massage"
+					},
+					"condition": {
+						"and": [
+							"shop=massage"
+						]
+					},
+					"mappings": [
+						{
+							"if": {
+								"and": [
+									"massage=chinese"
+								]
+							},
+							"then": {
+								"en": "<b>Massage: </b>Chinese"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"massage=thai"
+								]
+							},
+							"then": {
+								"en": "<b>Massage: </b>Thai"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"massage=acupressure"
+								]
+							},
+							"then": {
+								"en": "<b>Massage: </b>Acupressure"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"massage=shiatsu"
+								]
+							},
+							"then": {
+								"en": "<b>Massage: </b>Shiatsu"
+							}
+						}
+					],
+					"id": "shops-massage"
+				},
+				{
+					"group": "General",
+					"render": {
+						"en": "<b>Origin: </b>{origin}"
+					},
+					"question": {
+						"en": "What is the origin of the items sold in this shop?"
+					},
+					"freeform": {
+						"key": "origin"
+					},
+					"condition": {
+						"and": [
+							"shop!=massage",
+							"cuisine="
+						]
+					},
+					"mappings": [
+						{
+							"if": {
+								"and": [
+									"origin=asian"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Asian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"origin=chinese"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Chinese"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"origin=indian"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Indian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"origin=korean"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Korean"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"origin=thai"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Thai"
+							}
+						}
+					],
+					"id": "shops-origin"
+				},
+				{
+					"group": "General",
+					"render": {
+						"en": "<b>Cuisine: </b>{cuisine}"
+					},
+					"question": {
+						"en": "Where is the food sold in this shop coming from?"
+					},
+					"freeform": {
+						"key": "cuisine"
+					},
+					"condition": {
+						"and": [
+							"shop!=massage",
+							"cuisine~*"
+						]
+					},
+					"mappings": [
+						{
+							"if": {
+								"and": [
+									"cuisine=asian"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Asian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=chinese"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Chinese"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=indian"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Indian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=korean"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Korean"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=thai"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Thai"
+							}
+						}
+					],
+					"id": "shops-cuisine"
 				},
 				{
 					"builtin": "website",
@@ -217,11 +440,39 @@
 			"mapRendering": [
 				{
 					"icon": {
-						"render": "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg",
+						"render": "https://wiki.openstreetmap.org/w/images/c/c4/Shop-other-16.svg",
 						"mappings": [
 							{
 								"if": "shop=supermarket",
 								"then": "https://wiki.openstreetmap.org/w/images/7/76/Supermarket-14.svg"
+							},
+							{
+								"if": "shop=convenience",
+								"then": "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg"
+							},
+							{
+								"if": "shop=bakery",
+								"then": "https://wiki.openstreetmap.org/w/images/f/fe/Bakery-16.svg"
+							},
+							{
+								"if": "shop=greengrocer",
+								"then": "https://wiki.openstreetmap.org/w/images/d/d8/Greengrocer-14.svg"
+							},
+							{
+								"if": "shop=jewelry",
+								"then": "https://wiki.openstreetmap.org/w/images/8/8d/Jewellery-16.svg"
+							},
+							{
+								"if": "shop=seafood",
+								"then": "https://wiki.openstreetmap.org/w/images/d/d9/Seafood-14.svg"
+							},
+							{
+								"if": "shop=deli",
+								"then": "https://wiki.openstreetmap.org/wiki/File:Deli-14.svg"
+							},
+							{
+								"if": "shop=massage",
+								"then": "https://wiki.openstreetmap.org/w/images/2/29/Massage-14.svg"
 							}
 						]
 					},
@@ -250,6 +501,22 @@
 			},
 			"allowMove": true,
 			"wayHandling": 1,
+			"deletion": {
+				"softDeletionTags": {
+					"and": [
+						"shop=",
+						"disused:shop:={shop}"
+					]
+				},
+				"extraDeleteReasons": [
+					{
+						"explanation": {
+							"en": "{title()} has closed down permanently"
+						},
+						"changesetMessage": "shop_closed"
+					}
+				]
+			},
 			"icon": {
 				"freeform": {
 					"addExtraTags": []
@@ -270,6 +537,140 @@
 			}
 		},
 		{
+			"builtin": "shops",
+			"override": {
+				"minzoom": 21,
+				"presets": [],
+				"+tagRenderings": [
+					{
+						"render": {
+							"en": "<b>Origin: </b>{origin}"
+						},
+						"question": {
+							"en": "What is the origin of the items sold in this shop?"
+						},
+						"freeform": {
+							"key": "origin"
+						},
+						"mappings": [
+							{
+								"if": {
+									"and": [
+										"origin=asian"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Asian"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"origin=chinese"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Chinese"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"origin=indian"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Indian"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"origin=korean"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Korean"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"origin=thai"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Thai"
+								}
+							}
+						],
+						"id": "shops-origin"
+					},
+					{
+						"render": {
+							"en": "<b>Massage: </b>{massage}"
+						},
+						"question": {
+							"en": "What type of massage is given here?"
+						},
+						"freeform": {
+							"key": "massage"
+						},
+						"condition": {
+							"and": [
+								"shop=massage"
+							]
+						},
+						"mappings": [
+							{
+								"if": {
+									"and": [
+										"massage=chinese"
+									]
+								},
+								"then": {
+									"en": "<b>Massage: </b>Chinese"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"massage=thai"
+									]
+								},
+								"then": {
+									"en": "<b>Massage: </b>Thai"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"massage=acupressure"
+									]
+								},
+								"then": {
+									"en": "<b>Massage: </b>Acupressure"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"massage=shiatsu"
+									]
+								},
+								"then": {
+									"en": "<b>Massage: </b>Shiatsu"
+								}
+							}
+						],
+						"id": "shops-massage"
+					}
+				],
+				"filter": null,
+				"name": null
+			}
+		},
+		{
 			"id": "asianrestaurants",
 			"name": {
 				"en": "Asian restaurants"
@@ -277,13 +678,13 @@
 			"minzoom": 15,
 			"overpassTags": {
 				"and": [
+					"cuisine~(.*;)?(asian|korean|chinese|japanese|indian|thai|vietnamese|indonesian|filipino|malaysian|taiwanese|shandong|sichuan|hunan|okinawa_ryori|sushi|hot_pot|hotpot|dumplings|noodle|ramen|soba)(;.*)?",
 					{
 						"or": [
-							"amenity=restaurant",
-							"amenity=fast_food"
+							"amenity=fast_food",
+							"amenity=restaurant"
 						]
-					},
-					"cuisine~(.*;)?(asian|korean|chinese|japanese|indian|thai|vietnamese|indonesian|filipino|malaysian|taiwanese|shandong|sichuan|hunan|okinawa_ryori|sushi|hot_pot|hotpot|dumplings|noodle|ramen|soba)(;.*)?"
+					}
 				]
 			},
 			"title": {
@@ -820,8 +1221,32 @@
 				}
 			],
 			"presets": [],
+			"deletion": {
+				"softDeletionTags": {
+					"and": [
+						"amenity=",
+						"disused:amenity:={amenity}"
+					]
+				},
+				"extraDeleteReasons": [
+					{
+						"explanation": {
+							"en": "{title()} has closed down permanently"
+						},
+						"changesetMessage": "restaurant_closed"
+					}
+				]
+			},
 			"allowMove": true,
 			"wayHandling": 1
+		},
+		{
+			"builtin": "food",
+			"override": {
+				"minzoom": 21,
+				"filter": null,
+				"name": null
+			}
 		},
 		{
 			"id": "gardens",
