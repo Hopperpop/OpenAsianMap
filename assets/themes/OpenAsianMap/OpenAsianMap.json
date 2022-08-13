@@ -270,14 +270,6 @@
 			}
 		},
 		{
-			"builtin": "food",
-			"override": {
-				"minzoom": 21,
-				"filter": null,
-				"name": null
-			}
-		},
-		{
 			"id": "asianrestaurants",
 			"name": {
 				"en": "Asian restaurants"
@@ -830,22 +822,30 @@
 			"presets": [],
 			"deletion": {
 				"softDeletionTags": {
-				  "and": [
-					"amenity=",
-					"disused:amenity:={amenity}"
-				  ]
+					"and": [
+						"amenity=",
+						"disused:amenity:={amenity}"
+					]
 				},
 				"extraDeleteReasons": [
-				  {
-					"explanation": {
-					  "en": "{title()} has closed down permanently"
-					},
-					"changesetMessage": "restaurant_closed"
-				  }
+					{
+						"explanation": {
+							"en": "{title()} has closed down permanently"
+						},
+						"changesetMessage": "restaurant_closed"
+					}
 				]
-			  },
+			},
 			"allowMove": true,
 			"wayHandling": 1
+		},
+		{
+			"builtin": "food",
+			"override": {
+				"minzoom": 21,
+				"filter": null,
+				"name": null
+			}
 		},
 		{
 			"id": "gardens",
