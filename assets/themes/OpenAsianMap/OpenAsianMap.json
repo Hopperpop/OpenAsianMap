@@ -398,7 +398,7 @@
 			"builtin": "shops",
 			"override": {
 				"minzoom": 21,
-				"presets": null,
+				"presets": [],
 				"+tagRenderings": [
 					{
 						"render": {
