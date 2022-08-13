@@ -36,7 +36,8 @@
 					{
 						"or": [
 							"cuisine~(.*;)?(asian|chinese|indian|japanese|korean|thai)(;.*)?",
-							"origin~(.*;)?(asian|chinese|indian|japanese|korean|thai)(;.*)?"
+							"origin~(.*;)?(asian|chinese|indian|japanese|korean|thai)(;.*)?",
+							"massage~(.*;)?(chinese|thai|shiatsu|acupressure|korean|thai)(;.*)?"
 						]
 					}
 				]
@@ -331,6 +332,10 @@
 							{
 								"if": "shop=deli",
 								"then": "https://wiki.openstreetmap.org/wiki/File:Deli-14.svg"
+							},
+							{
+								"if": "shop=massage",
+								"then": "https://wiki.openstreetmap.org/w/images/2/29/Massage-14.svg"
 							}
 						]
 					},
