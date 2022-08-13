@@ -283,18 +283,16 @@
 				"en": "Asian restaurants"
 			},
 			"minzoom": 15,
-			"source": {
-				"osmTags": {
-					"and": [
-						"cuisine~(.*;)?(asian|korean|chinese|japanese|indian|thai|vietnamese|indonesian|filipino|malaysian|taiwanese|shandong|sichuan|hunan|okinawa_ryori|sushi|hot_pot|hotpot|dumplings|noodle|ramen|soba)(;.*)?",
-						{
-							"or": [
-								"amenity=fast_food",
-								"amenity=restaurant"
-							]
-						}
-					]
-				}
+			"overpassTags": {
+				"and": [
+					"cuisine~(.*;)?(asian|korean|chinese|japanese|indian|thai|vietnamese|indonesian|filipino|malaysian|taiwanese|shandong|sichuan|hunan|okinawa_ryori|sushi|hot_pot|hotpot|dumplings|noodle|ramen|soba)(;.*)?",
+					{
+						"or": [
+							"amenity=fast_food",
+							"amenity=restaurant"
+						]
+					}
+				]
 			},
 			"title": {
 				"render": {
@@ -830,6 +828,22 @@
 				}
 			],
 			"presets": [],
+			"deletion": {
+				"softDeletionTags": {
+				  "and": [
+					"amenity=",
+					"disused:amenity:={amenity}"
+				  ]
+				},
+				"extraDeleteReasons": [
+				  {
+					"explanation": {
+					  "en": "{title()} has closed down permanently"
+					},
+					"changesetMessage": "restaurant_closed"
+				  }
+				]
+			  },
 			"allowMove": true,
 			"wayHandling": 1
 		},
