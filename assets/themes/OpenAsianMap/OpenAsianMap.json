@@ -141,6 +141,71 @@
 					"id": "shops-type"
 				},
 				{
+					"group": "General",
+					"render": {
+						"en": "<b>Origin: </b>{shop}"
+					},
+					"question": {
+						"en": "What is the origin of the items sold in this shop?"
+					},
+					"freeform": {
+						"key": "origin"
+					},
+					"mappings": [
+						{
+							"if": {
+								"and": [
+									"origin=asian"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Asian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"origin=chinese"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Chinese"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"origin=indian"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Indian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"origin=korean"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Korean"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"origin=thai"
+								]
+							},
+							"then": {
+								"en": "<b>Origin: </b>Thai"
+							}
+						}
+					],
+					"id": "shops-origin"
+				},
+				{
 					"builtin": "website",
 					"override": {
 						"group": "contact",
@@ -250,6 +315,22 @@
 			},
 			"allowMove": true,
 			"wayHandling": 1,
+			"deletion": {
+				"softDeletionTags": {
+					"and": [
+						"shop=",
+						"disused:shop:={shop}"
+					]
+				},
+				"extraDeleteReasons": [
+					{
+						"explanation": {
+							"en": "{title()} has closed down permanently"
+						},
+						"changesetMessage": "shop_closed"
+					}
+				]
+			},
 			"icon": {
 				"freeform": {
 					"addExtraTags": []
@@ -267,6 +348,81 @@
 					"addExtraTags": []
 				},
 				"mappings": []
+			}
+		},
+		{
+			"builtin": "shops",
+			"override": {
+				"minzoom": 21,
+				"presets": [],
+				"+tagRenderings": [
+					{
+						"render": {
+							"en": "<b>Origin: </b>{shop}"
+						},
+						"question": {
+							"en": "What is the origin of the items sold in this shop?"
+						},
+						"freeform": {
+							"key": "origin"
+						},
+						"mappings": [
+							{
+								"if": {
+									"and": [
+										"origin=asian"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Asian"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"origin=chinese"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Chinese"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"origin=indian"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Indian"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"origin=korean"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Korean"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"origin=thai"
+									]
+								},
+								"then": {
+									"en": "<b>Origin: </b>Thai"
+								}
+							}
+						],
+						"id": "shops-origin"
+					}
+				],
+				"filter": null,
+				"name": null
 			}
 		},
 		{
