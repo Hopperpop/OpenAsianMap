@@ -284,7 +284,7 @@
 			},
 			"minzoom": 15,
 			"source": {
-				"=osmTags": {
+				"osmTags": {
 					"and": [
 						"cuisine~(.*;)?(asian|korean|chinese|japanese|indian|thai|vietnamese|indonesian|filipino|malaysian|taiwanese|shandong|sichuan|hunan|okinawa_ryori|sushi|hot_pot|hotpot|dumplings|noodle|ramen|soba)(;.*)?",
 						{
