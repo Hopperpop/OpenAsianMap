@@ -136,6 +136,26 @@
 							"then": {
 								"en": "<b>Type: </b>Seafood"
 							}
+						},
+						{
+							"if": {
+								"and": [
+									"shop=deli"
+								]
+							},
+							"then": {
+								"en": "<b>Type: </b>Delicatessen"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"shop=anime"
+								]
+							},
+							"then": {
+								"en": "<b>Type: </b>Anime/Manga"
+							}
 						}
 					],
 					"id": "shops-type"
@@ -282,11 +302,35 @@
 			"mapRendering": [
 				{
 					"icon": {
-						"render": "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg",
+						"render": "https://wiki.openstreetmap.org/w/images/c/c4/Shop-other-16.svg",
 						"mappings": [
 							{
 								"if": "shop=supermarket",
 								"then": "https://wiki.openstreetmap.org/w/images/7/76/Supermarket-14.svg"
+							},
+							{
+								"if": "shop=convenience",
+								"then": "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg"
+							},
+							{
+								"if": "shop=bakery",
+								"then": "https://wiki.openstreetmap.org/w/images/f/fe/Bakery-16.svg"
+							},
+							{
+								"if": "shop=greengrocer",
+								"then": "https://wiki.openstreetmap.org/w/images/d/d8/Greengrocer-14.svg"
+							},
+							{
+								"if": "shop=jewelry",
+								"then": "https://wiki.openstreetmap.org/w/images/8/8d/Jewellery-16.svg"
+							},
+							{
+								"if": "shop=seafood",
+								"then": "https://wiki.openstreetmap.org/w/images/d/d9/Seafood-14.svg"
+							},
+							{
+								"if": "shop=deli",
+								"then": "https://wiki.openstreetmap.org/wiki/File:Deli-14.svg"
 							}
 						]
 					},
@@ -354,7 +398,7 @@
 			"builtin": "shops",
 			"override": {
 				"minzoom": 21,
-				"presets": [],
+				"presets": null,
 				"+tagRenderings": [
 					{
 						"render": {
