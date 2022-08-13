@@ -164,6 +164,66 @@
 				{
 					"group": "General",
 					"render": {
+						"en": "<b>Massage: </b>{massage}"
+					},
+					"question": {
+						"en": "What type of massage is given here?"
+					},
+					"freeform": {
+						"key": "massage"
+					},
+					"condition": {
+						"and": [
+							"shop=massage"
+						]
+					},
+					"mappings": [
+						{
+							"if": {
+								"and": [
+									"massage=chinese"
+								]
+							},
+							"then": {
+								"en": "<b>Massage: </b>Chinese"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"massage=thai"
+								]
+							},
+							"then": {
+								"en": "<b>Massage: </b>Thai"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"massage=acupressure"
+								]
+							},
+							"then": {
+								"en": "<b>Massage: </b>Acupressure"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"massage=shiatsu"
+								]
+							},
+							"then": {
+								"en": "<b>Massage: </b>Shiatsu"
+							}
+						}
+					],
+					"id": "shops-massage"
+				},
+				{
+					"group": "General",
+					"render": {
 						"en": "<b>Origin: </b>{origin}"
 					},
 					"question": {
@@ -171,6 +231,11 @@
 					},
 					"freeform": {
 						"key": "origin"
+					},
+					"condition": {
+						"and": [
+							"shop!=massage"
+						]
 					},
 					"mappings": [
 						{
@@ -468,6 +533,65 @@
 							}
 						],
 						"id": "shops-origin"
+					},
+					{
+						"render": {
+							"en": "<b>Massage: </b>{massage}"
+						},
+						"question": {
+							"en": "What type of massage is given here?"
+						},
+						"freeform": {
+							"key": "massage"
+						},
+						"condition": {
+							"and": [
+								"shop=massage"
+							]
+						},
+						"mappings": [
+							{
+								"if": {
+									"and": [
+										"massage=chinese"
+									]
+								},
+								"then": {
+									"en": "<b>Massage: </b>Chinese"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"massage=thai"
+									]
+								},
+								"then": {
+									"en": "<b>Massage: </b>Thai"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"massage=acupressure"
+									]
+								},
+								"then": {
+									"en": "<b>Massage: </b>Acupressure"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"massage=shiatsu"
+									]
+								},
+								"then": {
+									"en": "<b>Massage: </b>Shiatsu"
+								}
+							}
+						],
+						"id": "shops-massage"
 					}
 				],
 				"filter": null,
