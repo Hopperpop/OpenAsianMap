@@ -270,558 +270,568 @@
 			}
 		},
 		{
-			"id": "asianrestaurants",
-			"name": {
-				"en": "Asian restaurants"
-			},
-			"minzoom": 15,
-			"overpassTags": {
-				"and": [
-					{
-						"or": [
-							"amenity=restaurant",
-							"amenity=fast_food"
+			"builtin": "food",
+			"override": {
+				"minzoom": 21,
+				"filter": null,
+				"name": null
+			}
+		},
+		{
+			"builtin": "food",
+			"override": {
+				"id": "asianrestaurants",
+				"name": {
+					"en": "Asian restaurants"
+				},
+				"minzoom": 15,
+				"source": {
+					"=osmTags": {
+						"and": [
+							"cuisine~(.*;)?(asian|korean|chinese|japanese|indian|thai|vietnamese|indonesian|filipino|malaysian|taiwanese|shandong|sichuan|hunan|okinawa_ryori|sushi|hot_pot|hotpot|dumplings|noodle|ramen|soba)(;.*)?",
+							{
+								"or": [
+									"amenity=fast_food",
+									"amenity=restaurant"
+								]
+							}
 						]
-					},
-					"cuisine~(.*;)?(asian|korean|chinese|japanese|indian|thai|vietnamese|indonesian|filipino|malaysian|taiwanese|shandong|sichuan|hunan|okinawa_ryori|sushi|hot_pot|hotpot|dumplings|noodle|ramen|soba)(;.*)?"
-				]
-			},
-			"title": {
-				"render": {
-					"en": "Asian restaurant"
+					}
 				},
-				"mappings": [
+				"title": {
+					"render": {
+						"en": "Asian restaurant"
+					},
+					"mappings": [
+						{
+							"if": {
+								"and": [
+									"name~*"
+								]
+							},
+							"then": {
+								"en": "{name}"
+							}
+						}
+					]
+				},
+				"description": {
+					"en": "Layer with all Asian restaurants."
+				},
+				"tagRenderings": [
 					{
-						"if": {
-							"and": [
-								"name~*"
-							]
+						"group": "General",
+						"question": {
+							"en": "What is the name of this restaurant?"
 						},
-						"then": {
-							"en": "{name}"
-						}
-					}
-				]
-			},
-			"description": {
-				"en": "Layer with all Asian restaurants."
-			},
-			"tagRenderings": [
-				{
-					"group": "General",
-					"question": {
-						"en": "What is the name of this restaurant?"
+						"render": {
+							"en": "<b>Name: </b> {name}"
+						},
+						"freeform": {
+							"key": "name"
+						},
+						"id": "Name"
 					},
-					"render": {
-						"en": "<b>Name: </b> {name}"
-					},
-					"freeform": {
-						"key": "name"
-					},
-					"id": "Name"
-				},
-				{
-					"group": "General",
-					"question": {
-						"en": "What type of business is this?"
-					},
-					"mappings": [
-						{
-							"if": "amenity=fast_food",
-							"then": {
-								"en": "This is a <b>fastfood</b>-business, focussed on fast service. If seating is available, these are rather limited and functional."
-							}
+					{
+						"group": "General",
+						"question": {
+							"en": "What type of business is this?"
 						},
-						{
-							"if": "amenity=restaurant",
-							"then": {
-								"en": "A <b>restaurant</b>, focussed on creating a nice experience where one is served at the table"
-							}
-						}
-					],
-					"id": "Fastfood vs restaurant"
-				},
-				{
-					"group": "General",
-					"render": {
-						"en": "<b>Cuisine: </b>{cuisine}"
-					},
-					"question": {
-						"en": "What Asian food do they serve here?"
-					},
-					"freeform": {
-						"key": "cuisine"
-					},
-					"mappings": [
-						{
-							"if": {
-								"and": [
-									"cuisine=asian"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Asian"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=korean"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Korean"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=chinese"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Chinees"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=japanese"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Japanese"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=indian"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Indian"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=thai"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Thai"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=sushi"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Sushi"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=dumplings"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Dumplings"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=noodle"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Noodle"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=ramen"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Ramen"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=soba"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Soba"
-							}
-						},
-						{
-							"if": {
-								"and": [
-									"cuisine=hot_pot"
-								]
-							},
-							"then": {
-								"en": "<b>Cuisine: </b>Hot pot"
-							}
-						}
-					],
-					"id": "restaurant-cuisine"
-				},
-				{
-					"group": "General",
-					"question": {
-						"en": "Does this place offer takea-way?"
-					},
-					"mappings": [
-						{
-							"if": "takeaway=only",
-							"then": {
-								"en": "This is a take-away only business"
-							}
-						},
-						{
-							"if": "takeaway=yes",
-							"then": {
-								"en": "Take-away is possible here"
-							}
-						},
-						{
-							"if": "takeaway=no",
-							"then": {
-								"en": "Take-away is not possible here"
-							}
-						}
-					],
-					"id": "Takeaway"
-				},
-				{
-					"builtin": "website",
-					"override": {
-						"group": "contact",
-						"render": "<b>Website: </b><a href='{website}' target='_blank'>{website}</a>"
-					}
-				},
-				{
-					"builtin": "email",
-					"override": {
-						"group": "contact",
-						"render": "<b>Email: </b><a href='mailto:{email}' target='_blank'>{email}</a>"
-					}
-				},
-				{
-					"builtin": "phone",
-					"override": {
-						"group": "contact",
-						"render": "<b>Phone: </b><a href='tel:{phone}'>{phone}</a>"
-					}
-				},
-				{
-					"builtin": "payment-options",
-					"override": {
-						"group": "extra"
-					}
-				},
-				{
-					"builtin": "opening_hours",
-					"override": {
-						"group": "extra"
-					}
-				},
-				{
-					"builtin": "reviews",
-					"override": {
-						"group": "extra"
-					}
-				},
-				{
-					"builtin": "images",
-					"override": {
-						"group": "extra"
-					}
-				}
-			],
-			"filter": [
-				{
-					"id": "is_open",
-					"options": [
-						{
-							"osmTags": "_isOpen=yes",
-							"question": {
-								"en": "Opened now"
-							}
-						}
-					]
-				},
-				{
-					"id": "takeway",
-					"options": [
-						{
-							"osmTags": {
-								"or": [
-									"takeaway=yes",
-									"takeaway=only"
-								]
-							},
-							"question": {
-								"en": "Take-away"
-							}
-						}
-					]
-				},
-				{
-					"id": "cuisine",
-					"options": [
-						{
-							"question": {
-								"en": "All"
-							}
-						},
-						{
-							"question": {
-								"en": "Korean"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?korean(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Chinese"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?chinese(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Japanese"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?japanese(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Indian"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?indian(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Thai"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?thai(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Sushi"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?sushi(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Dumplings"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?dumplings(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Noodle"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?noodle(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Ramen"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?ramen(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Soba"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?soba(;.*)?"
-								]
-							}
-						},
-						{
-							"question": {
-								"en": "Hot pot"
-							},
-							"osmTags": {
-								"or": [
-									"cuisine~i~(.*;)?hotpot(;.*)?",
-									"cuisine~i~(.*;)?hot_pot(;.*)?"
-								]
-							}
-						}
-					]
-				}
-			],
-			"hideUnderlayingFeaturesMinPercentage": 0,
-			"mapRendering": [
-				{
-					"icon": {
-						"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/fastfood.svg",
 						"mappings": [
 							{
-								"if": "cuisine~(.*;)?sushi(;.*)?",
-								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/sushi.svg"
-							},
-							{
-								"if": {
-									"or": [
-										"cuisine~(.*;)?hotpot(;.*)?",
-										"cuisine~(.*;)?hot_pot(;.*)?"
-									]
-								},
-								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/hotpot.svg"
-							},
-							{
-								"if": "cuisine~(.*;)?dumplings(;.*)?",
-								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/dumpling.svg"
-							},
-							{
-								"if": {
-									"or": [
-										"cuisine~(.*;)?ramen(;.*)?",
-										"cuisine~(.*;)?soba(;.*)?",
-										"cuisine~(.*;)?noodle(;.*)?"
-									]
-								},
-								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/noodle.svg"
+								"if": "amenity=fast_food",
+								"then": {
+									"en": "This is a <b>fastfood</b>-business, focussed on fast service. If seating is available, these are rather limited and functional."
+								}
 							},
 							{
 								"if": "amenity=restaurant",
-								"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/restaurant.svg"
+								"then": {
+									"en": "A <b>restaurant</b>, focussed on creating a nice experience where one is served at the table"
+								}
 							}
-						]
+						],
+						"id": "Fastfood vs restaurant"
 					},
-					"iconBadges": [
-						{
-							"if": "cuisine~(.*;)?japanese(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/jp.svg"
-							}
+					{
+						"group": "General",
+						"render": {
+							"en": "<b>Cuisine: </b>{cuisine}"
 						},
-						{
-							"if": "cuisine~(.*;)?korean(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/kr.svg"
-							}
+						"question": {
+							"en": "What Asian food do they serve here?"
 						},
-						{
-							"if": "cuisine~(.*;)?chinese(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/cn.svg"
-							}
+						"freeform": {
+							"key": "cuisine"
 						},
-						{
-							"if": "cuisine~(.*;)?indian(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/in.svg"
-							}
-						},
-						{
-							"if": "cuisine~(.*;)?thai(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/th.svg"
-							}
-						},
-						{
-							"if": "cuisine~(.*;)?vietnamese(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/vn.svg"
-							}
-						},
-						{
-							"if": "cuisine~(.*;)?indonesian(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/id.svg"
-							}
-						},
-						{
-							"if": "cuisine~(.*;)?filipino(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/ph.svg"
-							}
-						},
-						{
-							"if": "cuisine~(.*;)?malaysian(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/my.svg"
-							}
-						},
-						{
-							"if": "cuisine~(.*;)?taiwanese(;.*)?",
-							"then": {
-								"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/tw.svg"
-							}
-						},
-						{
-							"if": "opening_hours~*",
-							"then": "isOpen"
-						}
-					],
-					"label": {
 						"mappings": [
 							{
-								"if": "name~*",
-								"then": "<div style='background: white; padding: 0.25em; border-radius:0.5em'>{name}</div>"
+								"if": {
+									"and": [
+										"cuisine=asian"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Asian"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=korean"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Korean"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=chinese"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Chinees"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=japanese"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Japanese"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=indian"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Indian"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=thai"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Thai"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=sushi"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Sushi"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=dumplings"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Dumplings"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=noodle"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Noodle"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=ramen"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Ramen"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=soba"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Soba"
+								}
+							},
+							{
+								"if": {
+									"and": [
+										"cuisine=hot_pot"
+									]
+								},
+								"then": {
+									"en": "<b>Cuisine: </b>Hot pot"
+								}
+							}
+						],
+						"id": "restaurant-cuisine"
+					},
+					{
+						"group": "General",
+						"question": {
+							"en": "Does this place offer takea-way?"
+						},
+						"mappings": [
+							{
+								"if": "takeaway=only",
+								"then": {
+									"en": "This is a take-away only business"
+								}
+							},
+							{
+								"if": "takeaway=yes",
+								"then": {
+									"en": "Take-away is possible here"
+								}
+							},
+							{
+								"if": "takeaway=no",
+								"then": {
+									"en": "Take-away is not possible here"
+								}
+							}
+						],
+						"id": "Takeaway"
+					},
+					{
+						"builtin": "website",
+						"override": {
+							"group": "contact",
+							"render": "<b>Website: </b><a href='{website}' target='_blank'>{website}</a>"
+						}
+					},
+					{
+						"builtin": "email",
+						"override": {
+							"group": "contact",
+							"render": "<b>Email: </b><a href='mailto:{email}' target='_blank'>{email}</a>"
+						}
+					},
+					{
+						"builtin": "phone",
+						"override": {
+							"group": "contact",
+							"render": "<b>Phone: </b><a href='tel:{phone}'>{phone}</a>"
+						}
+					},
+					{
+						"builtin": "payment-options",
+						"override": {
+							"group": "extra"
+						}
+					},
+					{
+						"builtin": "opening_hours",
+						"override": {
+							"group": "extra"
+						}
+					},
+					{
+						"builtin": "reviews",
+						"override": {
+							"group": "extra"
+						}
+					},
+					{
+						"builtin": "images",
+						"override": {
+							"group": "extra"
+						}
+					}
+				],
+				"filter": [
+					{
+						"id": "is_open",
+						"options": [
+							{
+								"osmTags": "_isOpen=yes",
+								"question": {
+									"en": "Opened now"
+								}
 							}
 						]
 					},
-					"iconSize": "30,30,center",
-					"location": [
-						"point",
-						"centroid"
-					]
-				}
-			],
-			"presets": [],
-			"allowMove": true,
-			"wayHandling": 1
+					{
+						"id": "takeway",
+						"options": [
+							{
+								"osmTags": {
+									"or": [
+										"takeaway=yes",
+										"takeaway=only"
+									]
+								},
+								"question": {
+									"en": "Take-away"
+								}
+							}
+						]
+					},
+					{
+						"id": "cuisine",
+						"options": [
+							{
+								"question": {
+									"en": "All"
+								}
+							},
+							{
+								"question": {
+									"en": "Korean"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?korean(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Chinese"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?chinese(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Japanese"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?japanese(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Indian"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?indian(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Thai"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?thai(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Sushi"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?sushi(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Dumplings"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?dumplings(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Noodle"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?noodle(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Ramen"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?ramen(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Soba"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?soba(;.*)?"
+									]
+								}
+							},
+							{
+								"question": {
+									"en": "Hot pot"
+								},
+								"osmTags": {
+									"or": [
+										"cuisine~i~(.*;)?hotpot(;.*)?",
+										"cuisine~i~(.*;)?hot_pot(;.*)?"
+									]
+								}
+							}
+						]
+					}
+				],
+				"hideUnderlayingFeaturesMinPercentage": 0,
+				"mapRendering": [
+					{
+						"icon": {
+							"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/fastfood.svg",
+							"mappings": [
+								{
+									"if": "cuisine~(.*;)?sushi(;.*)?",
+									"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/sushi.svg"
+								},
+								{
+									"if": {
+										"or": [
+											"cuisine~(.*;)?hotpot(;.*)?",
+											"cuisine~(.*;)?hot_pot(;.*)?"
+										]
+									},
+									"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/hotpot.svg"
+								},
+								{
+									"if": "cuisine~(.*;)?dumplings(;.*)?",
+									"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/dumpling.svg"
+								},
+								{
+									"if": {
+										"or": [
+											"cuisine~(.*;)?ramen(;.*)?",
+											"cuisine~(.*;)?soba(;.*)?",
+											"cuisine~(.*;)?noodle(;.*)?"
+										]
+									},
+									"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/noodle.svg"
+								},
+								{
+									"if": "amenity=restaurant",
+									"then": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/restaurant.svg"
+								}
+							]
+						},
+						"iconBadges": [
+							{
+								"if": "cuisine~(.*;)?japanese(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/jp.svg"
+								}
+							},
+							{
+								"if": "cuisine~(.*;)?korean(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/kr.svg"
+								}
+							},
+							{
+								"if": "cuisine~(.*;)?chinese(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/cn.svg"
+								}
+							},
+							{
+								"if": "cuisine~(.*;)?indian(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/in.svg"
+								}
+							},
+							{
+								"if": "cuisine~(.*;)?thai(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/th.svg"
+								}
+							},
+							{
+								"if": "cuisine~(.*;)?vietnamese(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/vn.svg"
+								}
+							},
+							{
+								"if": "cuisine~(.*;)?indonesian(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/id.svg"
+								}
+							},
+							{
+								"if": "cuisine~(.*;)?filipino(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/ph.svg"
+								}
+							},
+							{
+								"if": "cuisine~(.*;)?malaysian(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/my.svg"
+								}
+							},
+							{
+								"if": "cuisine~(.*;)?taiwanese(;.*)?",
+								"then": {
+									"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/tw.svg"
+								}
+							},
+							{
+								"if": "opening_hours~*",
+								"then": "isOpen"
+							}
+						],
+						"label": {
+							"mappings": [
+								{
+									"if": "name~*",
+									"then": "<div style='background: white; padding: 0.25em; border-radius:0.5em'>{name}</div>"
+								}
+							]
+						},
+						"iconSize": "30,30,center",
+						"location": [
+							"point",
+							"centroid"
+						]
+					}
+				]
+			},
 		},
 		{
 			"id": "gardens",
