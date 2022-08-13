@@ -234,7 +234,8 @@
 					},
 					"condition": {
 						"and": [
-							"shop!=massage"
+							"shop!=massage",
+							"cuisine="
 						]
 					},
 					"mappings": [
@@ -290,6 +291,77 @@
 						}
 					],
 					"id": "shops-origin"
+				},
+				{
+					"group": "General",
+					"render": {
+						"en": "<b>Cuisine: </b>{cuisine}"
+					},
+					"question": {
+						"en": "Where is the food sold in this shop coming from?"
+					},
+					"freeform": {
+						"key": "cuisine"
+					},
+					"condition": {
+						"and": [
+							"shop!=massage",
+							"cuisine~*"
+						]
+					},
+					"mappings": [
+						{
+							"if": {
+								"and": [
+									"cuisine=asian"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Asian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=chinese"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Chinese"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=indian"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Indian"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=korean"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Korean"
+							}
+						},
+						{
+							"if": {
+								"and": [
+									"cuisine=thai"
+								]
+							},
+							"then": {
+								"en": "<b>Cuisine: </b>Thai"
+							}
+						}
+					],
+					"id": "shops-cuisine"
 				},
 				{
 					"builtin": "website",
