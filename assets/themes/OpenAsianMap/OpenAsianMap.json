@@ -268,7 +268,7 @@
 							"then": {
 								"en": "<b>Origin: </b>Indian"
 							}
-						},					
+						},
 						{
 							"if": {
 								"and": [
@@ -571,6 +571,11 @@
 						},
 						"freeform": {
 							"key": "origin"
+						},
+						"condition": {
+							"and": [
+								"shop!=massage"
+							]
 						},
 						"mappings": [
 							{
