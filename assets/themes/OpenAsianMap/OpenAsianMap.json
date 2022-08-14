@@ -488,7 +488,7 @@
 							},
 							{
 								"if": "shop=deli",
-								"then": "https://wiki.openstreetmap.org/wiki/File:Deli-14.svg"
+								"then": "https://wiki.openstreetmap.org/w/images/3/3b/Deli-14.svg"
 							},
 							{
 								"if": "shop=massage",
