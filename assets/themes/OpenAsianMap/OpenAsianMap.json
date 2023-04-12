@@ -499,7 +499,7 @@
 					"iconBadges": [
 						{
 							"if": "opening_hours~*",
-							"then": "isOpen"
+							"then": "icons.isOpen"
 						}
 					],
 					"label": {
@@ -1237,7 +1237,7 @@
 						},
 						{
 							"if": "opening_hours~*",
-							"then": "isOpen"
+							"then": "icons.isOpen"
 						}
 					],
 					"label": {
