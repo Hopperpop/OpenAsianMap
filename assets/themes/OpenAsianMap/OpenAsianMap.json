@@ -559,7 +559,7 @@
 		{
 			"builtin": "shops",
 			"override": {
-				"minzoom": 21,
+				"minzoom": 19,
 				"presets": [],
 				"+tagRenderings": [
 					{
@@ -1278,7 +1278,7 @@
 		{
 			"builtin": "food",
 			"override": {
-				"minzoom": 21,
+				"minzoom": 19,
 				"filter": null,
 				"name": null
 			}
