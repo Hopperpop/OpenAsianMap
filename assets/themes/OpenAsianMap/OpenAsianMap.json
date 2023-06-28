@@ -1248,7 +1248,8 @@
 							}
 						]
 					},
-					"iconSize": "30,30,center",
+					"iconSize": "30,30",
+					"anchor": "center",
 					"location": [
 						"point",
 						"centroid"
@@ -1326,7 +1327,8 @@
 				"render": "8"
 			},
 			"iconSize": {
-				"render": "40,40,center"
+				"render": "40,40",
+				"anchor": "center"
 			},
 			"color": {
 				"render": "#0f0"
@@ -1394,7 +1396,8 @@
 				"render": "8"
 			},
 			"iconSize": {
-				"render": "40,40,center"
+				"render": "40,40",
+				"anchor": "center"
 			},
 			"color": {
 				"render": "#00f"
