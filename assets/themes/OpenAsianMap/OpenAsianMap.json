@@ -1320,9 +1320,17 @@
 				"wikipedia"
 			],
 			"hideUnderlayingFeaturesMinPercentage": 0,
-			"icon": {
-				"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/sakura-tree.svg"
-			},
+			"mapRendering": [
+				{
+					"icon": {
+						"render": "https://raw.githubusercontent.com/Hopperpop/OpenAsianMap/main/assets/themes/OpenAsianMap/sakura-tree.svg"
+					},
+					"location": [
+						"point",
+						"centroid"
+					]
+				}
+			],
 			"width": {
 				"render": "8"
 			},
