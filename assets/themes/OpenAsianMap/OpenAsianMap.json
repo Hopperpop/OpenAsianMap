@@ -387,14 +387,14 @@
 					"builtin": "website",
 					"override": {
 						"label": ["Contact"],
-						"render": "<b>Website: </b><a href='{website}' target='_blank'>{website}</a>"
+						"render": "<b>Website: </b><a href='{website}' target='_blank' rel='noopener'>{website}</a>"
 					}
 				},
 				{
 					"builtin": "email",
 					"override": {
 						"label": ["Contact"],
-						"render": "<b>Email: </b><a href='mailto:{email}' target='_blank'>{email}</a>"
+						"render": "<b>Email: </b><a href='mailto:{email}' target='_blank' rel='noopener'>{email}</a>"
 					}
 				},
 				{
@@ -943,14 +943,14 @@
 					"builtin": "website",
 					"override": {
 						"label": ["Contact"],
-						"render": "<b>Website: </b><a href='{website}' target='_blank'>{website}</a>"
+						"render": "<b>Website: </b><a href='{website}' target='_blank' rel='noopener'>{website}</a>"
 					}
 				},
 				{
 					"builtin": "email",
 					"override": {
 						"label": ["Contact"],
-						"render": "<b>Email: </b><a href='mailto:{email}' target='_blank'>{email}</a>"
+						"render": "<b>Email: </b><a href='mailto:{email}' target='_blank' rel='noopener'>{email}</a>"
 					}
 				},
 				{
